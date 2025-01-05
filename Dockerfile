@@ -10,5 +10,5 @@ RUN mvn clean install -U -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /katana-spring/target/katana-spring-0.0.1-SNAPSHOT.jar katana.jar
-EXPOSE 9090
+EXPOSE 50051
 ENTRYPOINT ["java","-jar","katana.jar"]
