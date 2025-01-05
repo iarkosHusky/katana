@@ -1,5 +1,0 @@
-{
-  "start": {
-    "command": "java -jar katana-spring/target/katana-spring-0.0.1-SNAPSHOT.jar"
-  }
-}
