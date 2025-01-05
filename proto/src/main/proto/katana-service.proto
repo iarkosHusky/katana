@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package katana;
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.husky.katana";
+
+message KatanaDTO {
+	string idKatana = 1;
+	string nomKatana = 2;
+	int32 numKatana = 3;
+}
+
+message KatanaResp {
+    repeated KatanaDTO katana = 1;
+}
+
+service KatanaServ {
+	rpc getKatana(google.protobuf.Empty) returns (KatanaResp);
+}
